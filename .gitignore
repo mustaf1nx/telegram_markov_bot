@@ -1,0 +1,9 @@
+.env
+admins.json
+admins.json.tmp
+bot.stdout.log
+bot.stderr.log
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/

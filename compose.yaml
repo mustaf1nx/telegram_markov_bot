@@ -1,0 +1,23 @@
+services:
+  bot:
+    build:
+      context: .
+    container_name: telegram-markov-bot
+    restart: unless-stopped
+    init: true
+    env_file:
+      - .env
+    environment:
+      GREETINGS_FILE: /app/greetings.txt
+      ADMINS_FILE: /data/admins.json
+    volumes:
+      - bot-admins:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 15s
+
+volumes:
+  bot-admins:
