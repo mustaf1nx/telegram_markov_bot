@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir --requirement requirements.txt \
     && mkdir -p /data \
     && chown bot:bot /data
 
-COPY --chown=bot:bot bot.py markov.py greetings.txt ./
+COPY --chown=bot:bot bot.py markov.py greetings.txt op_admins.json ./
 
 USER bot
 

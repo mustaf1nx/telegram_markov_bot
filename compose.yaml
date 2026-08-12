@@ -10,6 +10,7 @@ services:
     environment:
       GREETINGS_FILE: /app/greetings.txt
       ADMINS_FILE: /data/admins.json
+      OP_ADMINS_FILE: /data/op_admins.json
     volumes:
       - bot-admins:/data
     read_only: true
